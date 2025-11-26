@@ -15,7 +15,9 @@ body {
   animation: bgMove 8s ease-in-out infinite;
   font-family: "Vazirmatn", sans-serif;
 }
-
+.hidden{
+  display: none;
+}
 @keyframes bgMove {
   0% {
     background-position: 0% 50%;
@@ -27,9 +29,8 @@ body {
     background-position: 0% 50%;
   }
 }
-
+/*start*/
 .start-container {
-  display: none;
   text-align: center;
   color: white;
   font-size: 1.7rem;
@@ -77,39 +78,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
-
-@media (max-width: 600px) {
-  .start-container {
-    width: 85%;
-    padding: 30px 25px;
-    font-size: 1.3rem;
-  }
-
-  .start-container h1 {
-    font-size: 1.4rem;
-  }
-
-  .start-container button {
-    font-size: 1rem;
-    padding: 8px 20px;
-  }
-
-  .category {
-    width: 85%;
-    padding: 25px 20px;
-  }
-
-  .category h1 {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
-
-  .cats button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 8px 0;
-  }
-}
+/*category*/
 
 .category {
   margin-top: 40px;
@@ -156,4 +125,38 @@ body {
   background: rgba(255, 255, 255, 0.32);
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+/*responsive*/
+
+@media (max-width: 600px) {
+  .start-container {
+    width: 85%;
+    padding: 30px 25px;
+    font-size: 1.3rem;
+  }
+
+  .start-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .start-container button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .category {
+    width: 85%;
+    padding: 25px 20px;
+  }
+
+  .category h1 {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  .cats button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 0;
+  }
 }
