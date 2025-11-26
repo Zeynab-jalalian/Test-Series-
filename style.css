@@ -19,7 +19,6 @@ body {
   background: linear-gradient(135deg, #0c0c0c, #272727, #0e0e0e);
   background-size: 200% 200%;
   animation: bgMove 8s ease-in-out infinite;
-  font-family: "Vazirmatn", sans-serif;
 }
 .hidden {
   display: none;
@@ -116,7 +115,6 @@ body {
 .cats button {
   width: 200px;
   padding: 10px 0;
-  border: none;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
@@ -210,7 +208,7 @@ body {
 }
 
 .answers input[type="radio"]:checked {
-  background: rgba(255, 255, 255, 0.8);
+  background: white;
   border-color: white;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
