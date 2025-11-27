@@ -1074,12 +1074,83 @@ const startGame = document.querySelector(".startGame");
 const category = document.querySelector(".category");
 const Dexter = document.querySelector(".Dexter");
 const questionBox = document.querySelector(".question-box");
+const questionTitle = document.querySelector(".question h2");
+const answers = document.querySelector(".answers");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+const currentQ = document.querySelector(".current-q");
+
+currentQuestion = 0;
+const selectedAnswers = [];
 
 startGame.addEventListener("click", () => {
   start_container.classList.add("hidden");
   category.classList.remove("hidden");
 });
+
+function ShowQuestionBox() {
+  currentQ.innerHTML = `${currentQuestion + 1}`;
+
+  questionTitle.innerHTML = questions[currentQuestion].question;
+  answers.innerHTML = "";
+
+  questions[currentQuestion].options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="q${
+      currentQuestion + 1
+    }" value="${index}"> ${option.text}`;
+    answers.appendChild(label);
+
+    const input = label.querySelector("input");
+
+    if (selectedAnswers[currentQuestion] === index) {
+      input.checked = true;
+    }
+
+    input.addEventListener("change", () => {
+      selectedAnswers[currentQuestion] = index;
+      if (currentQuestion < questions.length - 1) {
+        setTimeout(() => {
+          currentQuestion++;
+          ShowQuestionBox();
+          updateButtons();
+        }, 500);
+      }
+    });
+  });
+}
+
 Dexter.addEventListener("click", () => {
   category.classList.add("hidden");
   questionBox.classList.remove("hidden");
+
+  ShowQuestionBox();
+  updateButtons();
 });
+next.addEventListener("click", () => {
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    ShowQuestionBox();
+    updateButtons();
+  }
+});
+prev.addEventListener("click", () => {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    ShowQuestionBox();
+    updateButtons();
+  }
+});
+function updateButtons() {
+  if (currentQuestion === 0) {
+    prev.classList.add("disabled");
+  } else {
+    prev.classList.remove("disabled");
+  }
+
+  if (currentQuestion === questions.length - 1) {
+    next.innerText = "اتمام آزمون";
+  } else {
+    next.innerText = "بعدی";
+  }
+}
