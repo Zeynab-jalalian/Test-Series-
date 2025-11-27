@@ -1082,6 +1082,9 @@ const currentQ = document.querySelector(".current-q");
 
 currentQuestion = 0;
 const selectedAnswers = [];
+const dexterAudio = new Audio("Musics/dexter.mp3");
+dexterAudio.loop = true;
+dexterAudio.volume = 0.4;
 
 startGame.addEventListener("click", () => {
   start_container.classList.add("hidden");
@@ -1121,6 +1124,8 @@ function ShowQuestionBox() {
 }
 
 Dexter.addEventListener("click", () => {
+  dexterAudio.play();
+
   category.classList.add("hidden");
   questionBox.classList.remove("hidden");
 
