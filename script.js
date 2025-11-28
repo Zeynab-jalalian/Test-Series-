@@ -1282,6 +1282,7 @@ next.addEventListener("click", () => {
 
     maxScore = 0;
     winner = "";
+    
     for (let c in scoreTotals) {
       if (scoreTotals[c] > maxScore) {
         maxScore = scoreTotals[c];
