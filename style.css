@@ -268,8 +268,12 @@ body {
   overflow: hidden;
   border: 4px solid #eee;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
-
+.result .img-box:hover{
+  transform:scale(1.2);
+}
 .result .img-box img {
   width: 100%;
   height: 100%;
@@ -291,6 +295,7 @@ body {
 }
 
 .result p span{
+  display:block;
   font-weight: bold;
 }
 

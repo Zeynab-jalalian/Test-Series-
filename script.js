@@ -1068,6 +1068,109 @@ const questions = [
     ],
   },
 ];
+const results = [
+  {
+    key: "dexter",
+    name: "Dexter Morgan",
+    image: "images/dexter.jpg",
+    description: `
+    <span>شما شبیه دکستر مورگان هستید!</span>
+    شخصیتی مرموز و درونی که با دقت و تحلیل بالا همه چیز را می‌سنجد. شما خونسرد، حساب‌شده و بسیار باهوش هستید و توانایی تحلیل شرایط پیچیده را دارید. فردی شهودی هستید و غالباً از حس درونی‌تان برای تصمیم‌گیری استفاده می‌کنید. در عین حال سرکشید، اما سرکشی‌تان مرزهای شخصی مشخص دارد و همیشه کنترل خود را حفظ می‌کنید. بخشی از شخصیت خود را پنهان می‌کنید و احساسات‌تان را عموماً در درون نگه می‌دارید، بنابراین دیگران همیشه شما را کامل نمی‌بینند. ضعف شما گاهی در نشان ندادن احساسات و محدودیت در درک دیگران است، اما شجاعت، تمرکز و استقلال شما در موقعیت‌های دشوار همیشه برجسته باقی می‌ماند و شما فردی پیچیده و جذاب هستید که رمز و راز در رفتارهایش موج می‌زند.
+`,
+  },
+  {
+    key: "debra",
+    name: "Debra Morgan",
+    image: "images/debra.jpg",
+    description: `
+    <span>
+    شما شبیه دبرا مورگان هستید!
+    </span>
+    شخصیتی پرانرژی، برون‌گرا و پرشور که احساسات خود را به روشنی بیان می‌کند. شما بسیار شجاع و فداکار هستید و همیشه برای کسانی که دوستشان دارید، آماده کمک و حمایت هستید. فردی شهودی و تحلیلگر (Overthinker) هستید و غالباً با دقت و تعمق تصمیم می‌گیرید، اما گاهی احساساتتان تصمیم‌گیری‌ها را تحت تأثیر قرار می‌دهد. در کنار شجاعت و مهارت حل مسائل، گاهی حساسیت و هیجانات‌تان می‌تواند شما را آسیب‌پذیر کند، اما همین ترکیب از شجاعت، صداقت و وفاداری، شما را شخصیتی دوست‌داشتنی و الهام‌بخش می‌کند.
+    `,
+  },
+  {
+    key: "masuka",
+    name: "Vince Masuka",
+    image: "images/masuka.jpg",
+    description: `
+    <span>شما شبیه وینس ماسوکا هستید!</span>
+    شخصیتی شوخ‌طبع و بی‌تکلف که معمولاً آرام و منعطف است. شما باهوش و گاهی ریزبین هستید و می‌توانید جزئیات را خوب تشخیص دهید، اما عمدتاً ساده و بی‌دغدغه رفتار می‌کنید. فضا را با انرژی مثبت خود گرم می‌کنید و گاهی با سربه‌سر گذاشتن دیگران، لبخند به جمع می‌آورید. اگرچه کمی حساس هستید و وقتی حس کنید پذیرفته نمی‌شوید یا ناراحت می‌شوید، رفتار شما تغییر می‌کند و احساساتتان را پنهان می‌کنید، اما در اغلب اوقات، همین ترکیب شوخ‌طبعی، استقلال و دقت، شما را شخصیتی جذاب و قابل اعتماد می‌کند.
+    `,
+  },
+  {
+    key: "quinn",
+    name: "Joseph Quinn",
+    image: "images/quinn.jpg",
+    description: `
+    <span>شما شبیه جویی کوئین هستید!</span>
+    شخصیتی احساسی و گاهی هیجانی که گاهی بدون فکر تصمیم می‌گیرد، اما همزمان شجاع و کاربلد است. شما نامنظم و آزاد هستید، ولی شهود و حس ششم قوی‌تان به شما کمک می‌کند موقعیت‌ها را خوب درک کنید. مهربانی و فداکاری شما باعث می‌شود دیگران به شما اعتماد کنند، و با وجود این که گاهی احساسات خود را سرکوب می‌کنید، انرژی مثبت و شجاعتتان همیشه قابل توجه است.
+    `,
+  },
+  {
+    key: "batista",
+    name: "Angel Batista",
+    image: "images/batista.jpg",
+    description: `
+    <span>شما شبیه آنجل باتیستا هستید!</span>
+    فردی خونسرد و منطقی که تصمیماتش همیشه با احتیاط و سنجیدگی گرفته می‌شود. احساساتتان حمایتگرانه و مهربان است و همواره صداقت و عدالت برای شما اهمیت دارد. شما ترجیح می‌دهید همه چیز روی اصول و برنامه‌ریزی‌شده پیش برود، اما در عین حال منعطف و عاقل هستید. دیگران به آرامش و تعادل شما اعتماد می‌کنند و حضور شما در جمع احساس امنیت و اطمینان ایجاد می‌کند.
+    `,
+  },
+  {
+    key: "laguerta",
+    name: "María LaGuerta",
+    image: "images/laguerta.jpg",
+    description: `
+    <span>شما شبیه ماریا لاگوئرتا هستید!</span>
+    فردی باهوش و ریزبین که جاه‌طلبی و تلاش برای موفقیت همیشه در اولویت شماست. احساسات درونی خود را کنترل می‌کنید و منطق برایتان ارجحیت دارد، بنابراین تصمیماتتان سرسختانه و حساب‌شده گرفته می‌شود. شما منظم و برنامه‌ریز هستید و وقتی هدفی را در نظر می‌گیرید، با دقت و پشتکار آن را دنبال می‌کنید. گاهی محتاطانه عمل می‌کنید، اما همیشه آماده هستید تا با استراتژی درست، به خواسته‌هایتان برسید.
+    `,
+  },
+  {
+    key: "harry",
+    name: "Harry Morgan",
+    image: "images/harry.jpg",
+    description: `
+    <span>شما شبیه هری مورگان هستید!</span>
+    فردی درون‌گرا، آرام و خونسرد که معمولاً با دقت و منطق عمل می‌کنید. بشدت شنونده و همراه هستید و تصمیماتتان با فکر و سنجیدگی گرفته می‌شوند. صادق، فداکار و دارای وجدان قوی هستید، اما گاهی شرایط باعث می‌شود که انعطاف لازم را نشان دهید. شما متفاوت فکر می‌کنید و دیدگاه‌های نوآورانه دارید، و حضور شما آرامش و اعتماد را در محیط اطرافتان ایجاد می‌کند.
+    `,
+  },
+  {
+    key: "matthews",
+    name: "Thomas Matthews",
+    image: "images/matthews.jpg",
+    description: `
+    <span>شما شبیه توماس متیوز هستید!</span>
+    فردی خونسرد و آرام که تصمیماتش معمولاً با منطق و سنجیدگی گرفته می‌شوند. گاهی منفعت‌طلب و خودخواه هستید، اما در عین حال انعطاف‌پذیر و سازگار با شرایط هستید. جدی و محکم عمل می‌کنید و اغلب صادق هستید، اما گاهی کارهای غیرمنتظره انجام می‌دهید که دیگران را شگفت‌زده می‌کند. حضور شما حس امنیت و اعتماد ایجاد می‌کند و ترکیب منطق و عملگرایی‌تان باعث می‌شود در موقعیت‌های پیچیده موفق عمل کنید.
+    `,
+  },
+  {
+    key: "rita",
+    name: "Rita Bennet",
+    image: "images/rita.jpg",
+    description: `
+    <span>شما شبیه ریتا بنت هستید!</span>
+    فردی احساسی و مهربان که همواره فداکار و همراه دیگران است. درک بالایی از اطرافیان دارید و همواره مرزهای مشخص خود را رعایت می‌کنید. منظم و خوش‌رفتار هستید و حضور شما در جمع حس آرامش ایجاد می‌کند. درونگرا هستید و به دنیای درونی خود اهمیت می‌دهید، اما گاهی تحت تأثیر هیجانات و استرس‌ها واکنش نشان می‌دهید که این بخش انسانی شما را نمایان می‌کند. حضور شما ترکیبی از مهربانی، حساسیت و قدرت درونی است.
+    `,
+  },
+  {
+    key: "brian",
+    name: "Brian Moser",
+    image: "images/brian.jpg",
+    description: `
+    <span>شما شبیه برایان موزر هستید!</span>
+    فردی تحلیلگر و صبور که همیشه با دقت و برنامه‌ریزی اهداف خود را دنبال می‌کنید. خونسرد و آرام هستید و مدیریت بالایی روی احساسات خود دارید، اما بخشی از دنیای درونی‌تان را مخفی نگه می‌دارید. گاهی با کاریزما و شوخ‌طبعی، دیگران را تحت تأثیر قرار می‌دهید، اما زمانی که هدفی در پیش دارید، می‌توانید بی‌رحمانه و مصمم عمل کنید. حضور شما ترکیبی از هوش، محاسبه دقیق و جذابیت مرموز است که همگان را کنجکاو می‌کند.
+    `,
+  },
+  {
+    key: "doakes",
+    name: "James Doakes",
+    image: "images/doakes.jpg",
+    description: `
+    <span>شما شبیه جیمز دوکس هستید!</span>
+    فردی باهوش، ریزبین و دارای شهود قوی که همیشه جزئیات را دقیق می‌بیند و تحلیل می‌کند. در عین حال، درونگرا هستید و گاهی استرسی و هیجانی رفتار می‌کنید، اما معمولاً جدی و محکم هستید و ترجیح می‌دهید منطقی با مسائل برخورد کنید. با اینکه قانون‌مدار هستید و به نظم اهمیت می‌دهید، گاهی احساسات پنهان و هیجانات درونی، تصمیم‌گیری را پیچیده می‌کند. این ترکیب شما را فردی جذاب، دقیق و پررمز و راز می‌سازد.
+    `,
+  },
+];
 
 const start_container = document.querySelector(".start-container");
 const startGame = document.querySelector(".startGame");
@@ -1079,6 +1182,7 @@ const answers = document.querySelector(".answers");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const currentQ = document.querySelector(".current-q");
+const resultContainer = document.querySelector(".result");
 
 currentQuestion = 0;
 const selectedAnswers = [];
@@ -1154,35 +1258,57 @@ next.addEventListener("click", () => {
     ShowQuestionBox();
     updateButtons();
     return;
-  }
+  } else {
+    const answeredAll = questions.every(
+      (_, i) => selectedAnswers[i] !== undefined
+    );
 
-  const answeredAll = questions.every(
-    (_, i) => selectedAnswers[i] !== undefined
-  );
-
-  if (!answeredAll) {
-    alert("شما به تمامی سوالات پاسخ نداده‌اید!");
-    return;
-  }
-
-  for (let i in selectedAnswers) {
-    const answerIndex = selectedAnswers[i];
-    const scores = questions[i].options[answerIndex].scores;
-
-    for (let character in scores) {
-      scoreTotals[character] += scores[character];
+    if (!answeredAll) {
+      alert("شما به تمامی سوالات پاسخ نداده‌اید!");
+      return;
     }
-  }
 
-  maxScore = 0;
-  winner = "";
-  for (let c in scoreTotals) {
-    if (scoreTotals[c] > maxScore) {
-      maxScore = scoreTotals[c];
-      winner = c;
+    resultContainer.classList.remove("hidden");
+    questionBox.classList.add("hidden");
+
+    for (let i in selectedAnswers) {
+      const answerIndex = selectedAnswers[i];
+      const scores = questions[i].options[answerIndex].scores;
+
+      for (let character in scores) {
+        scoreTotals[character] += scores[character];
+      }
     }
+
+    maxScore = 0;
+    winner = "";
+    for (let c in scoreTotals) {
+      if (scoreTotals[c] > maxScore) {
+        maxScore = scoreTotals[c];
+        winner = c;
+      }
+    }
+
+    resultContainer.innerHTML = "";
+
+    const winnerData = results.find((item) => item.key === winner);
+
+    const imgBox = document.createElement("div");
+    imgBox.className = "img-box";
+    imgBox.innerHTML = `
+  <img src="${winnerData.image}" alt="${winnerData.name}">
+`;
+
+    const title = document.createElement("h1");
+    title.textContent = winnerData.name;
+
+    const desc = document.createElement("p");
+    desc.innerHTML = winnerData.description;
+
+    resultContainer.appendChild(imgBox);
+    resultContainer.appendChild(title);
+    resultContainer.appendChild(desc);
   }
-  alert(`آزمون به پایان رسید! شما شخصیت ${winner} هستید با نمره ${maxScore}.`);
 });
 
 prev.addEventListener("click", () => {
