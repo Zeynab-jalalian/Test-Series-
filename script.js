@@ -1085,6 +1085,22 @@ const selectedAnswers = [];
 const dexterAudio = new Audio("Musics/dexter.mp3");
 dexterAudio.loop = true;
 dexterAudio.volume = 0.2;
+maxScore = 0;
+winner = "";
+
+const scoreTotals = {
+  dexter: 0,
+  brian: 0,
+  harry: 0,
+  matthews: 0,
+  doakes: 0,
+  rita: 0,
+  laguerta: 0,
+  debra: 0,
+  batista: 0,
+  masuka: 0,
+  quinn: 0,
+};
 
 startGame.addEventListener("click", () => {
   start_container.classList.add("hidden");
@@ -1148,6 +1164,25 @@ next.addEventListener("click", () => {
     alert("شما به تمامی سوالات پاسخ نداده‌اید!");
     return;
   }
+
+  for (let i in selectedAnswers) {
+    const answerIndex = selectedAnswers[i];
+    const scores = questions[i].options[answerIndex].scores;
+
+    for (let character in scores) {
+      scoreTotals[character] += scores[character];
+    }
+  }
+
+  maxScore = 0;
+  winner = "";
+  for (let c in scoreTotals) {
+    if (scoreTotals[c] > maxScore) {
+      maxScore = scoreTotals[c];
+      winner = c;
+    }
+  }
+  alert(`آزمون به پایان رسید! شما شخصیت ${winner} هستید با نمره ${maxScore}.`);
 });
 
 prev.addEventListener("click", () => {
