@@ -1084,7 +1084,7 @@ currentQuestion = 0;
 const selectedAnswers = [];
 const dexterAudio = new Audio("Musics/dexter.mp3");
 dexterAudio.loop = true;
-dexterAudio.volume = 0.4;
+dexterAudio.volume = 0.2;
 
 startGame.addEventListener("click", () => {
   start_container.classList.add("hidden");
@@ -1137,8 +1137,19 @@ next.addEventListener("click", () => {
     currentQuestion++;
     ShowQuestionBox();
     updateButtons();
+    return;
+  }
+
+  const answeredAll = questions.every(
+    (_, i) => selectedAnswers[i] !== undefined
+  );
+
+  if (!answeredAll) {
+    alert("شما به تمامی سوالات پاسخ نداده‌اید!");
+    return;
   }
 });
+
 prev.addEventListener("click", () => {
   if (currentQuestion > 0) {
     currentQuestion--;
