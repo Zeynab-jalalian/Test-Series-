@@ -1,4 +1,5 @@
-const questions = [
+/*dexter start*/
+const questionsDexter = [
   {
     id: 1,
     question:
@@ -1068,7 +1069,7 @@ const questions = [
     ],
   },
 ];
-const results = [
+const resultsDexter = [
   {
     key: "dexter",
     name: "Dexter Morgan",
@@ -1171,26 +1172,9 @@ const results = [
     `,
   },
 ];
-
-const start_container = document.querySelector(".start-container");
-const startGame = document.querySelector(".startGame");
-const category = document.querySelector(".category");
-const Dexter = document.querySelector(".Dexter");
-const questionBox = document.querySelector(".question-box");
-const questionTitle = document.querySelector(".question h2");
-const answers = document.querySelector(".answers");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-const currentQ = document.querySelector(".current-q");
-const resultContainer = document.querySelector(".result");
-
-currentQuestion = 0;
-const selectedAnswers = [];
 const dexterAudio = new Audio("Musics/dexter.mp3");
 dexterAudio.loop = true;
 dexterAudio.volume = 0.2;
-maxScore = 0;
-winner = "";
 
 const scoreTotals = {
   dexter: 0,
@@ -1205,23 +1189,665 @@ const scoreTotals = {
   masuka: 0,
   quinn: 0,
 };
+/*dexter end*/
+
+/*the walking dead start*/
+const questionsTWD = [
+  {
+    question:
+      "زامبی‌ها حمله کردند و ناگهان یک زامبی به تو نزدیک می‌شود، از کدام وسیله استفاده می‌کنی؟",
+    options: [
+      {
+        text: "تفنگ",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "تیر و کمان",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "تبر",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "شمشیر",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "یکی از اعضای گروه در ساختمانی گیر کرده، چه کاری انجام می‌دهی؟",
+    options: [
+      {
+        text: "یک نقشه می‌ریزم تا با حیله و فکر خودم وارد شوم و نجات دهم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "با تیمی که جمع می‌کنم وارد ساختمان می‌شوم و حمله می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "بدون هیچ مکثی وارد ساختمان می‌شوم و هرکاری می‌کنم تا او را نجات دهم حتی به قیمت مرگ خودم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "شرایط بسیار ریسکی است پس وارد عمل نمی‌شوم و تسلیم از دست دادن او می‌شوم چون می‌دانم کاری از دستم بر نمی‌آید",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "منبع غذایی محدود است، چه تصمیمی می‌گیری؟",
+    options: [
+      {
+        text: "شکار و جمع‌آوری منابع اطراف",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "دزدی از دیگر گروه‌ها",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "از گروه خارج می‌شوم و سعی می‌کنم خودم تکروی کنم و راه خودم را پیدا کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "به همراه گروهم به دنبال منابع غذایی می‌رویم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "درگیری بین اعضای گروه پیش می‌آید، واکنش تو چیست؟",
+    options: [
+      {
+        text: "من هم وارد دعوا می‌شوم و سعی می‌کنم شر یکی‌شان را کم کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "سعی می‌کنم بین طرفین صلح ایجاد کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "عصبی می‌شوم و سعی می‌کنم خیلی رک و صریح دعوا را متوقف کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "تلاش می‌کنم کناره‌گیری کنم و درگیری را نادیده بگیرم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "در یک موقعیت خطرناک، چه رویکردی داری؟",
+    options: [
+      {
+        text: "با احتیاط جلو می‌روم و مراقب اطرافم هستم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "بی‌درنگ وارد عمل می‌شوم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "با دیگران مشورت می‌کنم و طبق نظر جمع عمل می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "از موقعیت فاصله می‌گیرم و منتظر می‌مانم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "آیا وقتی گروهی نیاز به کمک دارد، واکنش تو چیست؟",
+    options: [
+      {
+        text: "فورا به او کمک می‌کنم و حتی وارد اعضای تیم و اردوگاه خودمان می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "با احتیاط وارد عمل می‌شوم و شرایط را می‌سنجم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "سعی می‌کنم کمک کنم اما با ریسک کم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "کمک نمی‌کنم و تمرکز روی خودم است",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "در مواجهه با تهدید قوی، چه رفتاری داری؟",
+    options: [
+      {
+        text: "با تیم می‌جنگم و تا آخر ایستادگی می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "سعی می‌کنم شر تهدید را کم کنم و عقب‌نشینی کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "دور می‌شوم و منتظر فرصت مناسب می‌مانم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "سعی می‌کنم شرش را کم کنم و با او مستقیما وارد جنگ می‌شوم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "آیا حاضر به فداکاری برای اعضای گروه هستی؟",
+    options: [
+      {
+        text: "بله، هر کاری لازم باشد انجام می‌دهم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "سعی می‌کنم کمک کنم اما محدودیت دارم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "امکان ندارد خودم قربانی کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "تنها در صورت لزوم بسیار محدود",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "در شرایطی که کسی نیاز فوری به کمک دارد، چه تصمیمی می‌گیری؟",
+    options: [
+      {
+        text: "به سرعت کمک می‌کنم و برنامه‌ریزی می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "از دیگران کمک می‌گیرم و اقدام می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "با ریسک کم کمک می‌کنم و محتاط عمل می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "کمک نمی‌کنم و شرایط را نادیده می‌گیرم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+  {
+    question: "اگر در موقعیت زندگی یا مرگ قرار بگیری، چه واکنشی داری؟",
+    options: [
+      {
+        text: "با شجاعت مقابله می‌کنم و تا آخر می‌ایستم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "با احتیاط حرکت می‌کنم و جان خودم را حفظ می‌کنم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "فقط در صورتی خطر می‌کنم که دیگران را نجات دهم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+      {
+        text: "از موقعیت دوری می‌کنم و خودم را نجات می‌دهم",
+        scores: {
+          Rick: 0,
+          Daryl: 0,
+          Carol: 0,
+          Negan: 0,
+          Maggie: 0,
+          Michonne: 0,
+          Shane: 0,
+          Glenn: 0,
+        },
+      },
+    ],
+  },
+];
+
+const TWDAudio = new Audio("Musics/TWD.mp3");
+TWDAudio.loop = true;
+TWDAudio.volume = 0.2;
+
+const scoreTotalsTWD = {
+  Rick: 0,
+  Daryl: 0,
+  Michonne: 0,
+  Shane: 0,
+  Negan: 0,
+  Carol: 0,
+  Glenn: 0,
+  Maggie: 0,
+};
+/*the walking dead end*/
+
+/* GOT start*/
+const GOTAudio = new Audio("Musics/GOT.mp3");
+GOTAudio.loop = true;
+GOTAudio.volume = 0.2;
+/* GOT end*/
+
+/* Breaking Bad start*/
+
+const BBAudio = new Audio("Musics/BB.mp3");
+BBAudio.loop = true;
+BBAudio.volume = 0.2;
+/* Breaking Bad end*/
+
+/* vars start*/
+const start_container = document.querySelector(".start-container");
+const startGame = document.querySelector(".startGame");
+const category = document.querySelector(".category");
+const Dexter = document.querySelector(".Dexter");
+const TWD = document.querySelector(".TWD");
+const GOT = document.querySelector(".GOT");
+const BB = document.querySelector(".BB");
+const questionBox = document.querySelector(".question-box");
+const questionTitle = document.querySelector(".question h2");
+const answers = document.querySelector(".answers");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+const currentQ = document.querySelector(".current-q");
+const wholeQ = document.querySelector(".whole-q");
+const resultContainer = document.querySelector(".result");
+
+currentQuestion = 0;
+let selectedAnswers = [];
+maxScore = 0;
+winner = "";
+let selectedSeries = "";
+let questions = [];
+let results = [];
+/* vars end*/
 
 startGame.addEventListener("click", () => {
   start_container.classList.add("hidden");
   category.classList.remove("hidden");
 });
+function showQuestionBox() {
+  category.classList.add("hidden");
+  questionBox.classList.remove("hidden");
 
-function ShowQuestionBox() {
-  currentQ.innerHTML = `${currentQuestion + 1}`;
+  if (selectedSeries === "Dexter") {
+    questions = questionsDexter;
+    results = resultsDexter;
+  } else if (selectedSeries === "TWD") {
+    questions = questionsTWD;
+  }
+
+  currentQ.textContent = currentQuestion + 1;
+  wholeQ.textContent = questions.length;
 
   questionTitle.innerHTML = questions[currentQuestion].question;
   answers.innerHTML = "";
 
   questions[currentQuestion].options.forEach((option, index) => {
     const label = document.createElement("label");
-    label.innerHTML = `<input type="radio" name="q${
-      currentQuestion + 1
-    }" value="${index}"> ${option.text}`;
+    label.innerHTML = `
+      <input type="radio" name="q${currentQuestion}" value="${index}">
+      ${option.text}
+    `;
     answers.appendChild(label);
 
     const input = label.querySelector("input");
@@ -1235,28 +1861,56 @@ function ShowQuestionBox() {
       if (currentQuestion < questions.length - 1) {
         setTimeout(() => {
           currentQuestion++;
-          ShowQuestionBox();
-          updateButtons();
+          showQuestionBox();
         }, 500);
       }
     });
   });
+
+  updateButtons();
 }
 
 Dexter.addEventListener("click", () => {
+  selectedSeries = "Dexter";
   dexterAudio.play();
-
-  category.classList.add("hidden");
-  questionBox.classList.remove("hidden");
-
-  ShowQuestionBox();
-  updateButtons();
+  showQuestionBox();
 });
+TWD.addEventListener("click", () => {
+  selectedSeries = "TWD";
+  TWDAudio.play();
+
+  showQuestionBox();
+});
+GOT.addEventListener("click", () => {
+  selectedSeries = "GOT";
+  GOTAudio.play();
+
+  showQuestionBox();
+});
+BB.addEventListener("click", () => {
+  selectedSeries = "BB";
+  BBAudio.play();
+
+  showQuestionBox();
+});
+
+function updateButtons() {
+  if (currentQuestion === 0) {
+    prev.classList.add("disabled");
+  } else {
+    prev.classList.remove("disabled");
+  }
+
+  if (currentQuestion === questions.length - 1) {
+    next.innerText = "اتمام آزمون";
+  } else {
+    next.innerText = "بعدی";
+  }
+}
 next.addEventListener("click", () => {
   if (currentQuestion < questions.length - 1) {
     currentQuestion++;
-    ShowQuestionBox();
-    updateButtons();
+    showQuestionBox();
     return;
   } else {
     const answeredAll = questions.every(
@@ -1282,7 +1936,7 @@ next.addEventListener("click", () => {
 
     maxScore = 0;
     winner = "";
-    
+
     for (let c in scoreTotals) {
       if (scoreTotals[c] > maxScore) {
         maxScore = scoreTotals[c];
@@ -1311,24 +1965,9 @@ next.addEventListener("click", () => {
     resultContainer.appendChild(desc);
   }
 });
-
 prev.addEventListener("click", () => {
   if (currentQuestion > 0) {
     currentQuestion--;
-    ShowQuestionBox();
-    updateButtons();
+    showQuestionBox();
   }
 });
-function updateButtons() {
-  if (currentQuestion === 0) {
-    prev.classList.add("disabled");
-  } else {
-    prev.classList.remove("disabled");
-  }
-
-  if (currentQuestion === questions.length - 1) {
-    next.innerText = "اتمام آزمون";
-  } else {
-    next.innerText = "بعدی";
-  }
-}
