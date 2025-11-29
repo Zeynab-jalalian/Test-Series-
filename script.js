@@ -623,7 +623,7 @@ const questionsDexter = [
         },
       },
       {
-        text: ".منعطف عمل میکنم",
+        text: "منعطف عمل میکنم.",
         scores: {
           debra: 4,
           batista: 4,
@@ -1176,7 +1176,7 @@ const dexterAudio = new Audio("Musics/dexter.mp3");
 dexterAudio.loop = true;
 dexterAudio.volume = 0.2;
 
-const scoreTotals = {
+const scoreTotalsDexter = {
   dexter: 0,
   brian: 0,
   harry: 0,
@@ -1930,16 +1930,16 @@ next.addEventListener("click", () => {
       const scores = questions[i].options[answerIndex].scores;
 
       for (let character in scores) {
-        scoreTotals[character] += scores[character];
+        scoreTotalsDexter[character] += scores[character];
       }
     }
 
     maxScore = 0;
     winner = "";
 
-    for (let c in scoreTotals) {
-      if (scoreTotals[c] > maxScore) {
-        maxScore = scoreTotals[c];
+    for (let c in scoreTotalsDexter) {
+      if (scoreTotalsDexter[c] > maxScore) {
+        maxScore = scoreTotalsDexter[c];
         winner = c;
       }
     }
