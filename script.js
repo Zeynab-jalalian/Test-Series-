@@ -623,7 +623,7 @@ const questionsDexter = [
         },
       },
       {
-        text: "منعطف عمل میکنم",
+        text: ".منعطف عمل میکنم",
         scores: {
           debra: 4,
           batista: 4,
