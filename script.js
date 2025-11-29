@@ -1859,7 +1859,54 @@ const scoreTotalsTWD = {
 /*the walking dead end*/
 
 /* GOT start*/
-const questionsGOT = [];
+const questionsGOT = [
+  {
+    question: "اگر یک راز مهمت فاش شود، چه واکنشی نشان می‌دهی؟",
+    options: [
+      { text: "با صداقت و صراحت روبه‌رو می‌شوم", scores: { ned: 4, jon: 3, arya: 2 } },
+      { text: "برنامه‌ای طراحی می‌کنم تا کسی نفهمد", scores: { cersei: 4, baelish: 4, tyrion: 2, jaime: 2 } },
+      { text: "با صبر و دقت وضعیت را مدیریت می‌کنم", scores: { sansa: 3, daenerys: 3, tyrion: 3 } },
+      { text: "به دنبال انتقام می‌روم", scores: { arya: 4, jaime: 1, jon: 2 } },
+    ],
+  },
+  {
+    question: "فرض کن می‌خوای انتقام بگیری، سبک تو چیست؟",
+    options: [
+      { text: "رو در رو و مستقیم حمله می‌کنم", scores: { jon: 4, ned: 3, jaime: 3 } },
+      { text: "با نقشه و زیرکی دشمن را گیر می‌اندازم", scores: { arya: 3, baelish: 4, tyrion: 3 } },
+      { text: "صبر می‌کنم تا فرصت مناسب پیش بیاید", scores: { sansa: 3, cersei: 4, daenerys: 2 } },
+      { text: "احساسی و بی‌برنامه عمل می‌کنم", scores: { daenerys: 4, jon: 2, arya: 2 } },
+    ],
+  },
+  {
+    question: "قدرت و مقام چقدر برایت اهمیت دارد؟",
+    options: [
+      { text: "بسیار، زندگی‌ام حول قدرت می‌چرخد", scores: { cersei: 4, daenerys: 4, baelish: 3 } },
+      { text: "مهم است اما اخلاق و عدالت را فدای آن نمی‌کنم", scores: { jon: 4, ned: 4, tyrion: 2 } },
+      { text: "بهش علاقه دارم اما خیلی دنبال آن نیستم", scores: { sansa: 3, arya: 2, jaime: 2 } },
+      { text: "کمترین اهمیت را دارد، آزادی و عدالت مهم‌تر است", scores: { tyrion: 4, arya: 3 } },
+    ],
+  },
+  {
+    question: "در یک بحران، تو چگونه عمل می‌کنی؟",
+    options: [
+      { text: "با شجاعت و تصمیم سریع وارد عمل می‌شوم", scores: { jon: 4, arya: 3, ned: 3 } },
+      { text: "تحلیل می‌کنم و بهترین راه حل را انتخاب می‌کنم", scores: { tyrion: 4, baelish: 4, sansa: 3 } },
+      { text: "احساسی واکنش نشان می‌دهم", scores: { daenerys: 4, cersei: 3 } },
+      { text: "منتظر می‌مانم تا دیگران قدم اول را بردارند", scores: { jaime: 3, sansa: 2 } },
+    ],
+  },
+  {
+    question: "اگر کسی به تو خیانت کند، چه می‌کنی؟",
+    options: [
+      { text: "بی‌درنگ مقابله می‌کنم و انتقام می‌گیرم", scores: { arya: 4, jon: 3, jaime: 2 } },
+      { text: "برنامه‌ای پیچیده برای پاسخ می‌چینم", scores: { baelish: 4, cersei: 4, tyrion: 3 } },
+      { text: "سعی می‌کنم اشتباهاتش را ببخشم", scores: { ned: 4, tyrion: 2 } },
+      { text: "بی‌تفاوت می‌مانم و تمرکز روی خودم می‌کنم", scores: { sansa: 3, daenerys: 3 } },
+    ],
+  },
+];
+
 const resultsGOT = [
   {
     key: "ned",
